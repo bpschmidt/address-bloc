@@ -36,4 +36,15 @@ require_relative '../models/address_book.rb'
        expect(new_entry.email).to eq 'augusta.king@lovelace.com'
      end
    end
+   
+   context "remove" do
+     it "should remove an entry" do
+       book = AddressBook.new
+       
+       book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
+       expect(book).to remove_entry(@entry)
+       @entries.size
+      end
+     end
+   
  end

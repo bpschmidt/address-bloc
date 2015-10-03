@@ -37,18 +37,23 @@ require_relative '../models/address_book.rb'
      end
    end
   
-   context "remove" do
+   context "#remove_entry" do
      it "should remove an entry" do
        book = AddressBook.new
        
-       expect(book.entries.size).to eq 1
-       
        book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
-       expect(book).to remove_entry(@entry)
+       book.add_entry('John Jones', '023.234.3945', 'john.jones@person.com')
+      
+       expect(book.entries.size).to eq 2
        
-       expect(book.entries.size).to eq 0
-       
+       book.remove_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
+      
+       expect(book.entries.size).to eq 1
+      
       end
+    
+       
+     
      end
    
  end

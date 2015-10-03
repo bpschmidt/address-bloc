@@ -26,5 +26,9 @@ require_relative '../models/entry.rb'
        
        expect(entry.to_s).to eq(expected_string)
      end
+    
+     
+   
+
    end
  end

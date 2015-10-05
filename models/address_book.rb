@@ -23,10 +23,8 @@ class AddressBook
    
     def remove_entry(name, phone, email)
        @entries.each do |entry|
-           if entry == entry 
-               Entry.delete
-        end
+           delete_if Entry.new == entry 
         end
     end
-   
 end
+   

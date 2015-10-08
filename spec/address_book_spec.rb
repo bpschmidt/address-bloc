@@ -168,7 +168,7 @@ require_relative '../models/address_book.rb'
       end
     end
 
-      context "#iterative_search" do
+    context "#iterative_search" do
         it "searches AddressBook for a non-existent entry" do
           book.import_from_csv("entries.csv")
           entry = book.iterative_search("Dan")

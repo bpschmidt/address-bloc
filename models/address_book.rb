@@ -8,6 +8,16 @@ class AddressBook
         @entries = []
     end
 
+    def demolish(name, phone, email)
+
+      @entries.each do |entry|
+
+              @entries.each.delete(entry)
+            end
+
+      @entries.delete_all
+    end
+
    def add_entry(name, phone, email)
 
         index = 0
@@ -81,6 +91,6 @@ class AddressBook
         end
     end
           return nil
-    
+
   end
 end

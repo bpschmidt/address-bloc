@@ -118,6 +118,18 @@ require_relative '../models/address_book.rb'
 
       end
 
+    context "#demolish" do
+      it "should remove all entries" do
+
+        expect(entries.size). to eq @entries.count
+
+
+        @entries.each.delete(entries)
+        expect(book.entries.size).to eq 0
+
+       end
+     end
+
    context "#binary_search" do
      it "searches AddressBook for a non-existent entry" do
        book.import_from_csv("entries.csv")

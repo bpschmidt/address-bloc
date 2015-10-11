@@ -120,11 +120,14 @@ require_relative '../models/address_book.rb'
 
     context "#demolish" do
       it "should remove all entries" do
+        book = AddressBook.new
 
-        expect(entries.size). to eq @entries.count
+        book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
+        book.add_entry('John Jones', '023.234.3945', 'john.jones@person.com')
 
+        expect(book.entries.size).to eq 2
 
-        @entries.each.delete(entries)
+        book.demolish
         expect(book.entries.size).to eq 0
 
        end

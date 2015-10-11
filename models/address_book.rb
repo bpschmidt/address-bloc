@@ -10,12 +10,14 @@ class AddressBook
 
     def demolish(name, phone, email)
 
+      entry = name, phone, email
+
       @entries.each do |entry|
 
-              @entries.each.delete(entry)
+              @entries.delete_all(entry.name, entry.phone, entry.email)
             end
 
-      @entries.delete_all
+
     end
 
    def add_entry(name, phone, email)

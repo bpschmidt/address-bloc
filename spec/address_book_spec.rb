@@ -120,7 +120,7 @@ require_relative '../models/address_book.rb'
 
     context "#demolish" do
       it "should remove all entries" do
-        book = AddressBook.new
+        
 
         book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
         book.add_entry('John Jones', '023.234.3945', 'john.jones@person.com')

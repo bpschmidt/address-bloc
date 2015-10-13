@@ -10,7 +10,7 @@ class AddressBook
 
     def demolish(name, phone, email)
 
-      entry = name, phone, email
+      @entries = []
 
       @entries.each do |entry|
 
